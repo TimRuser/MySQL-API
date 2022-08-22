@@ -15,6 +15,7 @@ npm install
 
 Create a `.env` file and add these lines:
 ```dosini
+API_PORT=<port>
 MYSQL_HOST=<host> (most often localhost)
 MYSQL_USERNAME=<user>
 MYSQL_PASSWORD=<password>
