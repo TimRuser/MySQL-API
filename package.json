@@ -1,0 +1,27 @@
+{
+  "name": "mysql-api",
+  "version": "1.0.0",
+  "description": "A simple API to have full control over your mysql server with https",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alphinux/MySQL-API.git"
+  },
+  "keywords": [
+    "mysql",
+    "api",
+    "https"
+  ],
+  "author": "Tim Ruser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alphinux/MySQL-API/issues"
+  },
+  "homepage": "https://github.com/Alphinux/MySQL-API#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
