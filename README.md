@@ -19,11 +19,11 @@ Then run this query to refresh privileges:
 ## Usage
 ```bash
 # First clone this repository
-git clone https://github.com/Alphinux/MySQL-API
+$ git clone https://github.com/Alphinux/MySQL-API
 # Then enter it
-cd MySQL-API
+$ cd MySQL-API
 # Install dependencies
-npm install
+$ npm install
 ```
 
 Create a `.env` file and add these lines:
@@ -39,3 +39,43 @@ To start the server run `npm run server`
 ## API
 You'll now have an api listening on port `3333`.
 The URI is `/api`
+
+## Setting up a reverse proxy for https
+You'll first need to set up an A record for your domain.
+```bash
+# Then you can copy the default server block file
+$ cp /etc/nginx/sites-available/defaul /etc/nginx/sites-available/example.com
+# Make sure your user owns the directory
+$ sudo chown -R $USER:$USER /var/www/example.com/html
+$ sudo chmod -R 755 /var/www/example.com
+```
+Edit it:
+```config
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name example.com www.example.com
+
+        location / {
+                proxy_pass http://<ip>:<port>
+        }
+
+}
+```
+```bash
+# Create symlink
+$ sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+# Check configuration
+$ sudo nginx -t
+# Restart nginx
+$ sudo systemctl restart Nginx
+```
+We will now create and configure the certificate. You'll need to have [certbot](https://certbot.eff.org/) installed.
+```bash
+# Make certbot automatiacally create and configure your certificate
+sudo certbot --nginx
+# When prompted select the correct domain
+```
+$ sudo certbot --nginx
+```
