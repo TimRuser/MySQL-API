@@ -75,7 +75,4 @@ We will now create and configure the certificate. You'll need to have [certbot](
 ```bash
 # Make certbot automatiacally create and configure your certificate
 sudo certbot --nginx
-# When prompted select the correct domain
-```
-$ sudo certbot --nginx
 ```
