@@ -15,10 +15,13 @@ npm install
 
 Create a `.env` file and add these lines:
 ```dosini
-API_PORT=<port>
 MYSQL_HOST=<host> (most often localhost)
 MYSQL_USERNAME=<user>
 MYSQL_PASSWORD=<password>
+API_PORT=<port> (default is 3333)
 ```
+If you want to add your own api key add this line: `API_KEY=<key>`, else there's going to be a key generated for you.
 
 To start the server run `npm run server`
+## API
+You'll now have an api listening on port `3333`.
