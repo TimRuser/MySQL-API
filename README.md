@@ -39,7 +39,8 @@ To start the server run `npm run server`
 ## API
 You'll now have an api listening on port `3333`.
 The URI is `/api`
-
+### Authentication
+The server uses "Basic Auth". You'll need to use the username you selected and the password created by the programmm.
 ## Setting up a reverse proxy for https
 You'll first need to set up an A record for your domain.
 ```bash
