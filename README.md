@@ -38,3 +38,4 @@ If you want to add your own api key add this line: `API_KEY=<key>`, else there's
 To start the server run `npm run server`
 ## API
 You'll now have an api listening on port `3333`.
+The URI is `/api`

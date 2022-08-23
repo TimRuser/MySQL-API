@@ -85,4 +85,4 @@ app.post('/api', (req, res) => {
 
 // Start the API with Express
 const port = process.env.API_PORT || 3333;
-app.listen(port, () => console.log(`API available on http://localhost:${port}`));
+app.listen(port, () => console.log(`API available on http://localhost:${port}/api`));
